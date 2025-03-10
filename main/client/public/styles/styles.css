@@ -1,0 +1,653 @@
+/* General Page Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #222; /* Fallback in case image fails */
+    color: white;
+    text-align: center;
+    background-image: url('../img/background.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+
+    font-size: 40pt;
+    font-family: 'DM Sans';
+    margin-right: 40px;
+}
+
+h3 {
+
+    font-size: 30pt;
+    font-family: 'DM Sans';
+
+}
+
+p {
+
+    font-size: 15pt;
+    font-family: 'DM Sans';
+
+}
+
+.background-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/background.jpeg') no-repeat center center/cover;
+    filter: blur(8px) brightness(70%); /* Adjust blur & brightness */
+    z-index: -1; /* Keeps it behind everything */
+
+}
+
+/* Grey Band Background */
+.grey-band {
+    position: absolute;
+    top: 70%; /* Positions it in the middle */
+    left: 0;
+    width: 100%;
+    height: 240px; /* Adjust height as needed */
+    background: #C4C4C4;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    transform: translateY(-50%); /* Ensures it centers properly */
+    z-index: -1; /* Keeps it behind everything */
+}
+
+
+/* Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px auto;
+    background: #4F517D;
+    color: white;
+    border-bottom: 4px solid #D6DBD2; /* Grey line under header */
+}
+
+.logo img {
+    width: 100px;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    align-items: stretch; /* ✅ Ensures all cards stretch to the same height */
+    margin-top: 50px;
+}
+
+.card {
+    width: 20%;
+    height: 500px;
+    background: linear-gradient(to bottom, #C4A77D 53%, #5E503C 80%);
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    border-radius: 10px;
+    border-width: 11px;
+    border-style:solid;
+    border-color: #4F517D;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center; /* Centers text as well */
+}
+
+.card a {
+    display: flex; /* Make <a> cover the full card */
+    flex-direction: column; /* Keep image and text stacked */
+    justify-content: space-between; /* Keep content spaced */
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Keep text color */
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+    border: 10px solid white;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 1.5); /* White glow */
+}
+
+.card-content {
+    width: 100%;
+    background: #4F517D;
+    padding: 11px;
+    color: white;
+    font-weight: bold;
+    border-radius: 0 0 10px 10px;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: translateY(-10px);
+    border: 10px solid white;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 1.5); /* White glow */
+}
+
+
+hr {
+
+    width: 100%;
+    padding-top: 3pt;
+    fill: black;
+
+}
+
+.image-placeholder {
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25%;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    margin-top:20%;
+    object-fit: cover; /* Ensures the image fills the circle */
+}
+
+.card:hover {
+    border: 10px solid white;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 1); /* White glow */
+}
+
+/* Centered Signup Page */
+.signup-container {
+    width: 30%;
+    margin: 80px auto;
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Form Styling */
+.signup-container h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.signup-container input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #C4A77D; /* Tan border */
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2); /* Light transparency */
+    color: white;
+    font-size: 16px;
+}
+
+.signup-container input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Signup Button */
+.signup-container button {
+    width: 95%;
+    padding: 12px;
+    background: #4F517D; /* Match site theme */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.signup-container button:hover {
+    background: white;
+    color: #4F517D;
+}
+
+/* Signup Links */
+.signup-container p {
+    color: white;
+    margin-top: 10px;
+}
+
+.signup-container a {
+    color: #88FBF4; /* Light blue for contrast */
+    text-decoration: none;
+}
+
+.signup-container a:hover {
+    text-decoration: underline;
+}
+
+nav {
+
+
+    margin-left: 30pt;
+
+}
+
+ul {
+
+    display: flex;
+
+}
+
+nav a {
+    text-decoration: none; /* Removes default underline */
+    color: #f2f2f2; /* Default color */
+    font-size: 20pt;
+    font-family: 'DM Sans';
+    padding: 10px 170px;
+    transition: all 0.2s ease-in-out; /* ✅ Smooth transition */
+}
+
+/* 🔥 Hover Effect */
+nav a:hover {
+    text-decoration: underline; /* ✅ Adds underline */
+    color: #C4A77D; /* ✅ Change to relevant tan color */
+    background-color: rgba(255, 255, 255, 0.1); /* Optional: Light transparent background */
+    border-radius: 5px; /* Optional: Slightly rounded corners */
+}
+
+/* 🔥 Keep the active link styled */
+nav a.active {
+    color: white; /* ✅ Make active link white */
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+nav ul {
+    list-style: none; /* ✅ Removes bullet points */
+    padding: 0; /* ✅ Removes default padding */
+    margin: 0; /* ✅ Removes default margin */
+    display: flex; /* ✅ Keeps items in a row */
+    gap: 20px; /* Optional: Adds spacing between links */
+}
+
+/* Stockroom Page Layout */
+.stockroom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    gap: 30px;
+}
+
+/* First row: Two cards side by side */
+.stockroom-row {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+/* Second row: Single card centered */
+.stockroom-row.single {
+    justify-content: center;
+}
+
+/* Stockroom Cards */
+.stockroom-container .card {
+    width: 450px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #C4A77D 53%, #5E503C 80%);
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Card Hover Effect */
+.stockroom-container .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+}
+
+/* Card Text */
+.stockroom-container .card-content {
+    width: 100%;
+    background: #4F517D;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+}
+
+/* Ensure Links Fill the Cards */
+.stockroom-container .card a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Analytics Page Layout */
+.analytics-container {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    gap: 30px;
+}
+
+/* First row: Large single card */
+.analytics-row.single {
+    justify-content: left;
+    display: flex;
+}
+
+/* Second row: Two small cards side by side */
+.analytics-row {
+    margin-top:10pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px;
+}
+
+/* Large Card (Used this week) */
+.analytics-container .card.large {
+    width: 380px;
+    height: 600px;
+    margin-right: 150pt;
+    margin-left: 120pt;
+}
+
+/* Small Cards (Best vs. Worst, Seasonal Trends) */
+.analytics-container .card.small {
+    width: 500px;
+    height: 250px;
+}
+
+.card.medium {
+
+    width: 700px;
+    height: 500px;
+
+}
+
+.analytics-container .card.button {
+    width: 300px;
+    height: 00px;
+    margin: auto;
+}
+
+/* Card Hover Effect */
+.analytics-container .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
+}
+
+/* Card Text */
+.analytics-container .card-content {
+    width: 100%;
+    background: #4F517D;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+}
+
+/* Ensure Links Fill the Cards */
+.analytics-container .card a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.analytics-container .card-content {
+    width: 100%;
+    background: #4F517D;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+}
+
+.analytics-container .card.large .card-content {
+    width: 100%;
+    background: #4F517D;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 0 0 10px 10px;
+    margin-top:auto;
+    text-align: center;
+}
+
+/* Order Page Layout */
+.order-container {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+
+
+/* First row: Large single card */
+.order-row.single {
+    margin-right: auto;
+    margin-left: 15%;
+}
+
+/* Second row: Two small cards side by side */
+.order-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+/* Large Card (Order) */
+.order-container .card.large {
+    width: 500px;
+    height: 600px;
+    border: 11px solid #4F517D; /* ✅ Adds the blue outline */
+}
+
+/* Small Cards (Add, Confirm) */
+.order-container .card.small {
+    width: 400px;
+    height: 250px;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+}
+
+.order-form label {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    align-self: flex-start;
+}
+
+.order-form input,
+.order-form select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #4F517D;
+    background: white;
+    color: #333;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 5px;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.card-order {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.add-order-button {
+    padding: 12px 24px;
+    color: #ffffff;
+    font-size: 18px;
+    background-color: #4F517D;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.add-order-button:hover {
+    background-color: white;
+    color: #4F517D;
+    border: 2px solid #4F517D;
+}
+
+
+/* Seasonal Trends Page Layout */
+.season-container {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    gap: 30px;
+}
+
+/* Title for Season */
+.season-title {
+    background: #4F517D;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 20%;
+    margin:20pt auto;
+}
+
+/* First row: Large single card */
+.season-row.single {
+    justify-content: center;
+    margin-right: auto;
+    margin-left:300px;
+}
+
+/* Second row: Three small cards side by side */
+.season-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px auto;
+    gap: 20px;
+}
+
+/* Large Card (Info about season) */
+.season-container .card.large {
+    width: 750px;
+    height: 600px;
+}
+
+/* Small Cards (Beer, Wine, Cocktail) */
+.season-container .card.small {
+    width: 400px;
+    height: 250px;
+}
+
+/* Highlighted Card (Wine Choice) */
+.season-container .card.highlight {
+    border: 3px solid white;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
+}
+
+#radiobuttons {
+    flex-direction: row !important;
+}
+
+.card-order {
+    margin-top: auto;
+    width: 100%;
+    background: #4F517D;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    border-radius: 0 0 15px 3px;
+    text-align: left; /* ✅ Aligns button to the left */
+}
+
+.add-order-button {
+    margin-left:39%;
+    padding:30px;
+    color: #ffffff;
+    text-decoration: bold;
+    font-size: 20px;
+    background-color:#C4A77D;
+    border:none;
+    border-radius: 10px;
+}
+
+.no-hover .card:hover,
+.no-hover .add-order-button:hover,
+.no-hover .order-form input:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: #4F517D !important;
+}
+
+#item-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 10px; /* Space between items */
+    padding: 10px;
+    list-style: none;
+    
+    max-height: 600px; /* Adjust height as needed */
+    overflow-y: auto; /* Enables vertical scrolling */
+    border: 1px solid #ccc; /* Optional: Adds a border */
+}
+
+
+#item-list li {
+    padding: 10px;
+    border: 1px solid #ddd; /* Optional: Add a border */
+    text-align: center;
+}
